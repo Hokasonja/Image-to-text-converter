@@ -52,3 +52,7 @@ jobs:
       - name: Test
         run: go test -v .
 
+      # for Lint
+      - name: Lint
+        run: go vet      
+
