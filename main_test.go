@@ -15,7 +15,7 @@ func TestHello(t *testing.T) {
 
 func TestPlus(t *testing.T) {
 
-	want := 3
+	want := 5
 
 	got := plus(2, 3)
 
