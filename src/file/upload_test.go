@@ -23,7 +23,7 @@ func TestUpload(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			_, err := Upload("../public/images/" + tt.args.filename)
+			_, err := Upload("../../public/images/" + tt.args.filename)
 			if (err != nil) != tt.wantErr {
 				t.Fatalf("wantErr %t, gotErr %t\n", tt.wantErr, err != nil)
 			}
