@@ -50,9 +50,9 @@ jobs:
 
       # This step performs unit tests specified.
       - name: Test
-        run: go test -v .
+        run: go test -v ./...
 
       # for Lint
       - name: Lint
-        run: go vet      
+        run: go vet ./...
 
