@@ -21,7 +21,7 @@ func main() {
 	fmt.Println(hello())
 	fmt.Println(plus(2, 3))
 
-	img, err := file.Upload("test2.png")
+	img, err := file.Upload("public/images/" + "test2.png")
 	if err != nil {
 		panic(err)
 	}
