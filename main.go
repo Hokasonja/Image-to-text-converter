@@ -1,24 +1,11 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/Hokasonja/Image-to-text-converter/src/converter"
 	"github.com/Hokasonja/Image-to-text-converter/src/file"
 )
 
-func hello() string {
-	return "Hello HokaSonja"
-}
-
-func plus(a, b int) int {
-	return a + b
-}
-
 func main() {
-
-	fmt.Println(hello())
-	fmt.Println(plus(2, 3))
 
 	prefix := "public/images/"
 
