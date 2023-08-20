@@ -14,7 +14,7 @@ func TestOutput(t *testing.T) {
 		{
 			name: "output test1",
 			args: args{
-				multiline: []string{"hello\n", "my name\n", "hokasonja\n"},
+				multiline: []string{"hello", "my name", "hokasonja"},
 			},
 			want: "hello\nmy name\nhokasonja\n",
 		},
