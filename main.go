@@ -11,12 +11,13 @@ func main() {
 
 	img, err := file.Upload(prefix + "test2.png")
 	if err != nil {
-
 		panic(err)
 	}
 
-	cvt := converter.Converter{Image: img}
-	outputStr := cvt.ConvertImgToString(img)
+	resizedImg := file.Resize(img)
+
+	cvt := converter.Converter{Image: resizedImg}
+	outputStr := cvt.ConvertImgToString(resizedImg)
 
 	for i := 0; i < len(outputStr); i++ {
 		println(outputStr[i])
