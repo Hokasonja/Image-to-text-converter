@@ -26,6 +26,10 @@ func main() {
 	cvt := converter.Converter{Image: resizedImg}
 	outputStr := cvt.ConvertImgToString(resizedImg)
 
+	if err := file.Create(imageFileName, outputStr); err != nil {
+		panic(err)
+	}
+
 	for i := 0; i < len(outputStr); i++ {
 		println(outputStr[i])
 	}
