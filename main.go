@@ -1,15 +1,22 @@
 package main
 
 import (
+	"fmt"
 	"github.com/Hokasonja/Image-to-text-converter/src/converter"
 	"github.com/Hokasonja/Image-to-text-converter/src/file"
+	"os"
 )
 
 func main() {
 
-	prefix := "public/images/"
+	args := os.Args
+	if len(args) < 2 {
+		fmt.Print("Please input image file name.")
+	}
 
-	img, err := file.Upload(prefix + "test2.png")
+	imageFileName := args[1]
+
+	img, err := file.Upload(imageFileName)
 	if err != nil {
 		panic(err)
 	}
@@ -22,6 +29,4 @@ func main() {
 	for i := 0; i < len(outputStr); i++ {
 		println(outputStr[i])
 	}
-
-	// println(output.Output(outputStr))
 }
